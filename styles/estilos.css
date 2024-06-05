@@ -71,6 +71,7 @@ h6 {
 
 .navbar{ 
     padding: 10px 10px;
+    background-color: var(--color-primario) !important;
 }
 
 .logo {

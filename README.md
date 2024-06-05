@@ -64,6 +64,7 @@ Las imágenes utilizadas en este proyecto fueron seleccionadas de una base de im
 
 1. Clona el repositorio.
 2. Abre el archivo `index.html` en tu navegador preferido.
+3. Abre el enlase creado desde GitHub Pages https://lauro-sa.github.io/web-maravillas-arg/
 
 ## Autor
 
