@@ -15,7 +15,7 @@ Este proyecto presenta las maravillas naturales de Argentina a través de una p�
 - **Google Fonts**: Para las tipografías utilizadas en el sitio.
 - **Canva**: Para la selección y edición de imágenes.
 - **Photoshop**: Para la edición y optimización de imágenes.
-- **Chat GPT-4**: Para el enriquecimiento de los textos y consultas.
+- **Chat GPT-4o**: Para el enriquecimiento de los textos y consultas.
 - **Git**: Para el control de versiones.
 - **GitHub Pages**: Para la publicación del sitio web.
 
