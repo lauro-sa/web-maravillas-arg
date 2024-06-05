@@ -1,0 +1,89 @@
+/* Sección Carrusel Miniaturas */
+.marquesina {
+    display: flex;
+    block-size: var(--altura-elemento-marquesina);
+    margin-block: var(--altura-elemento-marquesina);
+    position: relative;
+    overflow-x: hidden;
+    mask-image: linear-gradient(
+      to right,
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 20%,
+      hsl(0 0% 0% / 1) 80%,
+      hsl(0 0% 0% / 0)
+    );
+  }
+  
+  .marquesina--8 {
+    --ancho-elemento-marquesina: 100px;
+    --altura-elemento-marquesina: 100px;
+    --duracion-marquesina: 36s;
+    --elementos-marquesina: 8;
+  }
+  
+  .marquesina__elemento {
+    --desplazamiento-elemento-marquesina: max(
+      calc(var(--ancho-elemento-marquesina) * var(--elementos-marquesina)),
+      calc(100% + var(--ancho-elemento-marquesina))
+    );
+    --demora-marquesina: calc(var(--duracion-marquesina) / var(--elementos-marquesina) * (var(--elementos-marquesina) - var(--indice-elemento-marquesina)) * -1);
+    position: absolute;
+    inset-inline-start: var(--desplazamiento-elemento-marquesina);
+    transform: translateX(-50%);
+    animation: desplazar linear var(--duracion-marquesina) var(--demora-marquesina, 0s) infinite;
+  }
+  
+  .marquesina__elemento:nth-child(4n) {
+    border-top-right-radius: 1rem;
+  }
+  
+  .marquesina__elemento:nth-child(4n + 1) {
+    border-bottom-right-radius: 1rem;
+  }
+  
+  .marquesina__elemento:nth-child(4n + 2) {
+    border-bottom-left-radius: 1rem;
+  }
+  
+  .marquesina__elemento:nth-child(4n + 3) {
+    border-top-left-radius: 1rem;
+  }
+  
+  .marquesina--8 .marquesina__elemento:nth-of-type(1) {
+    --indice-elemento-marquesina: 1;
+  }
+  
+  .marquesina--8 .marquesina__elemento:nth-of-type(2) {
+    --indice-elemento-marquesina: 2;
+  }
+  
+  .marquesina--8 .marquesina__elemento:nth-of-type(3) {
+    --indice-elemento-marquesina: 3;
+  }
+  
+  .marquesina--8 .marquesina__elemento:nth-of-type(4) {
+    --indice-elemento-marquesina: 4;
+  }
+  
+  .marquesina--8 .marquesina__elemento:nth-of-type(5) {
+    --indice-elemento-marquesina: 5;
+  }
+  
+  .marquesina--8 .marquesina__elemento:nth-of-type(6) {
+    --indice-elemento-marquesina: 6;
+  }
+  
+  .marquesina--8 .marquesina__elemento:nth-of-type(7) {
+    --indice-elemento-marquesina: 7;
+  }
+  
+  .marquesina--8 .marquesina__elemento:nth-of-type(8) {
+    --indice-elemento-marquesina: 8;
+  }
+  
+  
+  @keyframes desplazar {
+    to {
+      inset-inline-start: calc(var(--ancho-elemento-marquesina) * -1);
+    }
+  }

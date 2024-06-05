@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Maravillas de Argentina es un sitio informativo que destaca las bellezas naturales del país. Descubre información sobre destinos turísticos, actividades recomendadas y consejos de viaje.">
+    <meta name="keywords"
+        content="Argentina, turismo, maravillas naturales, destinos turísticos, actividades, consejos de viaje">
+    <meta name="author" content="SAL">
+    <!-- Favicon, icono para las pestañas de los navegadores -->
+    <link rel="shortcut icon" href="img/logo/logo01.ico" type="image/x-icon">
+    <!-- Título de la página -->
+    <title>Maravillas de Argentina</title>
+    <!-- Enlace a Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Enlace al Kit de Font Awesome -->
+    <script src="https://kit.fontawesome.com/bcd2cfca14.js" crossorigin="anonymous"></script>
+    <!-- Enlace a estilos CSS -->
+    <link rel="stylesheet" href="styles/estilos.css">
+    <link rel="stylesheet" href="styles/firma-sal.css">
+    <link rel="stylesheet" href="styles/estilos-carrusel-miniaturas.css">
+</head>
+
+<body>
+
+
+    <!-- Header y Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="logo">
+                <a class="navbar-brand me-auto" href="/">
+                    <img src="img/logo/logo01.png" alt="Logo">
+                    Maravillas de Argentina
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#maravillas">Maravillas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#actividades">Actividades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#consejos">Consejos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal"
+                            data-bs-target="#contactModal">Hablamos?</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contacto Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Formulario de Contacto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrusel Principal Bootstrap -->
+    <section id="carrusel" class="carousel slide carrusel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/carrusel/Aconcagua.jpg" class="d-block w-100" alt="Aconcagua">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+                    <div class="fondo-borroso-titulo p-3 rounded">
+                        <h5>Aconcagua</h5>
+                        <p>La montaña más alta de América</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Más elementos del carrusel -->
+            <div class="carousel-item">
+                <img src="img/carrusel/Cataratas del Iguazú.jpg" class="d-block w-100" alt="Cataratas del Iguazú">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+                    <div class="fondo-borroso-titulo p-3 rounded">
+                        <h5>Cataratas del Iguazú</h5>
+                        <p>Una de las maravillas naturales más impresionantes del mundo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carrusel/Glaciar Perito Moreno.jpg" class="d-block w-100" alt="Glaciar Perito Moreno">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+                    <div class="fondo-borroso-titulo p-3 rounded">
+                        <h5>Glaciar Perito Moreno</h5>
+                        <p>Uno de los glaciares más famosos y accesibles del mundo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carrusel/Parque Nacional Nahuel Huapi.jpg" class="d-block w-100"
+                    alt="Parque Nacional Nahuel Huapi">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+                    <div class="fondo-borroso-titulo p-3 rounded">
+                        <h5>Parque Nacional Nahuel Huapi</h5>
+                        <p>Uno de los parques nacionales más antiguos y grandes de Argentina</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carrusel/Parque Nacional Talampaya.jpg" class="d-block w-100"
+                    alt="Parque Nacional Talampaya">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+                    <div class="fondo-borroso-titulo p-3 rounded">
+                        <h5>Parque Nacional Talampaya</h5>
+                        <p>Conocido por sus impresionantes formaciones rocosas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carrusel/Península Valdés.jpg" class="d-block w-100" alt="Península Valdés">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+                    <div class="fondo-borroso-titulo p-3 rounded">
+                        <h5>Península Valdés</h5>
+                        <p>Un santuario de vida silvestre</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carrusel/Quebrada de Humahuaca.jpg" class="d-block w-100" alt="Quebrada de Humahuaca">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+                    <div class="fondo-borroso-titulo p-3 rounded">
+                        <h5>Quebrada de Humahuaca</h5>
+                        <p>Un valle de montañas coloridas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carrusel/Selva Misionera.jpg" class="d-block w-100" alt="Selva Misionera">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+                    <div class="fondo-borroso-titulo p-3 rounded">
+                        <h5>Selva Misionera</h5>
+                        <p>Una región de exuberante vegetación</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carrusel/Valle de la Luna.jpg" class="d-block w-100" alt="Valle de la Luna">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+                    <div class="fondo-borroso-titulo p-3 rounded">
+                        <h5>Valle de la Luna</h5>
+                        <p>Un paisaje de otro planeta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </section>
+
+    <!-- Seccion Card Boostrap de los destinos -->
+    <main id="maravillas" class="py-5">
+        <div class="container">
+            <h2 class="text-center titulo-cards tracking-in-expand-fwd">Las Maravillas de Argentina</h2>
+            <div class="row">
+                <!-- Tarjeta Cataratas del Iguazú -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/card/Cataratas del Iguazú.jpg" class="card-img-top" alt="Cataratas del Iguazú">
+                        <div class="card-body">
+                            <h5 class="card-title">Cataratas del Iguazú</h5>
+                            <p class="card-text">Las Cataratas del Iguazú son una de las maravillas naturales más
+                                impresionantes del mundo.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalIguazu">
+                                Más info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta Glaciar Perito Moreno -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/card/Glaciar Perito Moreno.jpg" class="card-img-top" alt="Glaciar Perito Moreno">
+                        <div class="card-body">
+                            <h5 class="card-title">Glaciar Perito Moreno</h5>
+                            <p class="card-text">El Glaciar Perito Moreno es uno de los glaciares más famosos y
+                                accesibles del mundo.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalPeritoMoreno">
+                                Más info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta Aconcagua -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/card/Aconcagua.jpg" class="card-img-top" alt="Aconcagua">
+                        <div class="card-body">
+                            <h5 class="card-title">Aconcagua</h5>
+                            <p class="card-text">El Aconcagua es la montaña más alta de América, un desafío para los
+                                montañistas.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalAconcagua">
+                                Más info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta Quebrada de Humahuaca -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/card/Quebrada de Humahuaca.jpg" class="card-img-top" alt="Quebrada de Humahuaca">
+                        <div class="card-body">
+                            <h5 class="card-title">Quebrada de Humahuaca</h5>
+                            <p class="card-text">La Quebrada de Humahuaca es un valle de montañas coloridas y
+                                formaciones geológicas únicas.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalHumahuaca">
+                                Más info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta Península Valdés -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/card/Península Valdés.jpg" class="card-img-top" alt="Península Valdés">
+                        <div class="card-body">
+                            <h5 class="card-title">Península Valdés</h5>
+                            <p class="card-text">La Península Valdés es un santuario de vida silvestre y un sitio de
+                                importancia mundial para la conservación.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalValdes">
+                                Más info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta Parque Nacional Nahuel Huapi -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/card/Parque Nacional Nahuel Huapi.jpg" class="card-img-top"
+                            alt="Parque Nacional Nahuel Huapi">
+                        <div class="card-body">
+                            <h5 class="card-title">Parque Nacional Nahuel Huapi</h5>
+                            <p class="card-text">El Parque Nacional Nahuel Huapi es uno de los parques nacionales más
+                                antiguos y grandes de Argentina.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalNahuelHuapi">
+                                Más info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta Parque Nacional Talampaya -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/card/Parque Nacional Talampaya.jpg" class="card-img-top"
+                            alt="Parque Nacional Talampaya">
+                        <div class="card-body">
+                            <h5 class="card-title">Parque Nacional Talampaya</h5>
+                            <p class="card-text">El Parque Nacional Talampaya es conocido por sus impresionantes
+                                formaciones rocosas y su rica historia paleontológica.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalTalampaya">
+                                Más info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta Selva Misionera -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/card/Selva Misionera.jpg" class="card-img-top" alt="Selva Misionera">
+                        <div class="card-body">
+                            <h5 class="card-title">Selva Misionera</h5>
+                            <p class="card-text">La Selva Misionera es una región de exuberante vegetación y gran
+                                biodiversidad.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalMisionera">
+                                Más info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta Valle de la Luna -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/card/Valle de la Luna.jpg" class="card-img-top" alt="Valle de la Luna">
+                        <div class="card-body">
+                            <h5 class="card-title">Valle de la Luna</h5>
+                            <p class="card-text">El Valle de la Luna es un paisaje de otro planeta, ubicado en el Parque
+                                Provincial Ischigualasto.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalValleLuna">
+                                Más info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Cataratas del Iguazú -->
+        <div class="modal fade" id="modalIguazu" tabindex="-1" aria-labelledby="modalIguazuLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalIguazuLabel">Cataratas del Iguazú</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/card/Cataratas del Iguazú.jpg" class="img-fluid mb-3" alt="Cataratas del Iguazú">
+                        <p>Las Cataratas del Iguazú, ubicadas en la provincia de Misiones, son una de las maravillas
+                            naturales más impresionantes del mundo. Conformadas por 275 saltos de agua, estas cataratas
+                            forman un espectáculo de belleza inigualable en el corazón de la selva subtropical. El
+                            estruendo del agua y la exuberante vegetación que las rodea hacen de este lugar un destino
+                            imperdible para los amantes de la naturaleza.</p>
+                        <a href="https://www.iguazuargentina.com/es/" target="_blank" class="btn btn-primary">Página
+                            oficial</a>
+                        <a href="https://maps.app.goo.gl/EXqXciiwyrZa1CEJ7" target="_blank"
+                            class="btn btn-secondary">Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Glaciar Perito Moreno -->
+        <div class="modal fade" id="modalPeritoMoreno" tabindex="-1" aria-labelledby="modalPeritoMorenoLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalPeritoMorenoLabel">Glaciar Perito Moreno</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/card/Glaciar Perito Moreno.jpg" class="img-fluid mb-3"
+                            alt="Glaciar Perito Moreno">
+                        <p>El Glaciar Perito Moreno, situado en el Parque Nacional Los Glaciares en la provincia de
+                            Santa Cruz, es uno de los glaciares más famosos y accesibles del mundo. Con una extensión de
+                            250 km² y una altura de 60 metros sobre el nivel del agua, ofrece un espectáculo natural
+                            único. El sonido de los bloques de hielo desprendiéndose y cayendo al agua es una
+                            experiencia inolvidable para todos los visitantes.</p>
+                        <a href="https://www.patagonia-argentina.com/es/glaciar-perito-moreno/" target="_blank"
+                            class="btn btn-primary">Página oficial</a>
+                        <a href="https://www.google.com/maps/place/Glaciar+Perito+Moreno/" target="_blank"
+                            class="btn btn-secondary">Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Aconcagua -->
+        <div class="modal fade" id="modalAconcagua" tabindex="-1" aria-labelledby="modalAconcaguaLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAconcaguaLabel">Aconcagua</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/card/Aconcagua.jpg" class="img-fluid mb-3" alt="Aconcagua">
+                        <p>El Aconcagua, ubicado en la provincia de Mendoza, es la montaña más alta de América con sus
+                            6.959 metros de altura. Este coloso de los Andes es un desafío para los montañistas de todo
+                            el mundo que buscan alcanzar su cumbre. Además de su importancia deportiva, el Aconcagua
+                            ofrece paisajes de increíble belleza y es un símbolo de la majestuosidad de la cordillera
+                            andina.</p>
+                        <a href="https://mendoza.tur.ar/productos/cerro-aconcagua/" target="_blank"
+                            class="btn btn-primary">Página
+                            oficial</a>
+                        <a href="https://www.google.com/maps/place/Aconcagua/" target="_blank"
+                            class="btn btn-secondary">Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Quebrada de Humahuaca -->
+        <div class="modal fade" id="modalHumahuaca" tabindex="-1" aria-labelledby="modalHumahuacaLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalHumahuacaLabel">Quebrada de Humahuaca</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/card/Quebrada de Humahuaca.jpg" class="img-fluid mb-3"
+                            alt="Quebrada de Humahuaca">
+                        <p>La Quebrada de Humahuaca, en la provincia de Jujuy, es un valle de montañas coloridas y
+                            formaciones geológicas únicas. Este paisaje de belleza impresionante es también un lugar de
+                            gran valor cultural e histórico, ya que ha sido habitado por diversas civilizaciones durante
+                            miles de años. La combinación de historia, cultura y naturaleza hace de la Quebrada de
+                            Humahuaca un destino fascinante.</p>
+                        <a href="https://www.quebradadehumahuaca.com/info-gral/" target="_blank"
+                            class="btn btn-primary">Página oficial</a>
+                        <a href="https://www.google.com/maps/place/Quebrada+de+Humahuaca/" target="_blank"
+                            class="btn btn-secondary">Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Península Valdés -->
+        <div class="modal fade" id="modalValdes" tabindex="-1" aria-labelledby="modalValdesLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalValdesLabel">Península Valdés</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/card/Península Valdés.jpg" class="img-fluid mb-3" alt="Península Valdés">
+                        <p>La Península Valdés, ubicada en la provincia de Chubut, es un santuario de vida silvestre y
+                            un sitio de importancia mundial para la conservación. Aquí se pueden observar ballenas
+                            francas australes, elefantes marinos, pingüinos y una gran variedad de aves. Este entorno
+                            natural, declarado Patrimonio de la Humanidad por la UNESCO, ofrece una oportunidad única
+                            para la observación de fauna en su hábitat natural.</p>
+                        <a href="https://www.patagonia-argentina.com/es/peninsula-valdes/" target="_blank"
+                            class="btn btn-primary">Página oficial</a>
+                        <a href="https://www.google.com/maps/place/Península+Valdés/" target="_blank"
+                            class="btn btn-secondary">Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Parque Nacional Nahuel Huapi -->
+        <div class="modal fade" id="modalNahuelHuapi" tabindex="-1" aria-labelledby="modalNahuelHuapiLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalNahuelHuapiLabel">Parque Nacional Nahuel Huapi</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/card/Parque Nacional Nahuel Huapi.jpg" class="img-fluid mb-3"
+                            alt="Parque Nacional Nahuel Huapi">
+                        <p>El Parque Nacional Nahuel Huapi, que se extiende entre las provincias de Río Negro y Neuquén,
+                            es uno de los parques nacionales más antiguos y grandes de Argentina. Con sus lagos
+                            cristalinos, bosques frondosos y montañas imponentes, es un paraíso para los amantes de la
+                            naturaleza y las actividades al aire libre. El lago Nahuel Huapi, en el corazón del parque,
+                            es especialmente famoso por su belleza escénica.</p>
+                        <a href="https://www.nahuelhuapi.gov.ar/" target="_blank" class="btn btn-primary">Página
+                            oficial</a>
+                        <a href="https://maps.app.goo.gl/We81eK4EKXFc4jqX6" target="_blank"
+                            class="btn btn-secondary">Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Parque Nacional Talampaya -->
+        <div class="modal fade" id="modalTalampaya" tabindex="-1" aria-labelledby="modalTalampayaLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTalampayaLabel">Parque Nacional Talampaya</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/card/Parque Nacional Talampaya.jpg" class="img-fluid mb-3"
+                            alt="Parque Nacional Talampaya">
+                        <p>El Parque Nacional Talampaya, en la provincia de La Rioja, es conocido por sus impresionantes
+                            formaciones rocosas y su rica historia paleontológica. Las gigantescas paredes de roca roja
+                            y los cañones tallados por la erosión ofrecen un paisaje de otro mundo. Además, en este
+                            parque se han encontrado fósiles de dinosaurios y otras especies prehistóricas, haciendo de
+                            Talampaya un lugar de gran interés científico y turístico.</p>
+                        <a href="https://talampaya.com" target="_blank" class="btn btn-primary">Página oficial</a>
+                        <a href="https://maps.app.goo.gl/YiCKAAi5LApKMfv97" target="_blank"
+                            class="btn btn-secondary">Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Selva Misionera -->
+        <div class="modal fade" id="modalMisionera" tabindex="-1" aria-labelledby="modalMisioneraLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalMisioneraLabel">Selva Misionera</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/card/Selva Misionera.jpg" class="img-fluid mb-3" alt="Selva Misionera">
+                        <p>La Selva Misionera, ubicada en la provincia de Misiones, es una región de exuberante
+                            vegetación y gran biodiversidad. Este ecosistema subtropical es hogar de numerosas especies
+                            de plantas y animales, muchas de ellas únicas en el mundo. La selva ofrece una experiencia
+                            inmersiva en la naturaleza y es un lugar ideal para el ecoturismo y la observación de vida
+                            silvestre.</p>
+                        <a href="https://www.misiones.tur.ar/" target="_blank" class="btn btn-primary">Página
+                            oficial</a>
+                        <a href="https://maps.app.goo.gl/duijsEgS9ej9Ej4v8" target="_blank"
+                            class="btn btn-secondary">Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Cueva de las Manos -->
+        <div class="modal fade" id="modalCuevaManos" tabindex="-1" aria-labelledby="modalCuevaManosLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCuevaManosLabel">Cueva de las Manos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/card/Cueva de las Manos.jpg" class="img-fluid mb-3" alt="Cueva de las Manos">
+                        <p>La Cueva de las Manos, en la provincia de Santa Cruz, es un sitio arqueológico de gran
+                            importancia por sus pinturas rupestres que datan de hace más de 9.000 años. Estas pinturas,
+                            realizadas por las primeras comunidades humanas que habitaron la región, representan manos,
+                            animales y escenas de caza, ofreciendo una fascinante ventana al pasado. La cueva es
+                            Patrimonio de la Humanidad por la UNESCO.</p>
+                        <a href="https://larutanatural.gob.ar/es/imperdible/42/cueva-de-las-manos" target="_blank"
+                            class="btn btn-primary">Página oficial</a>
+                        <a href="https://maps.app.goo.gl/rC87hGuLrWnDWB44A" target="_blank"
+                            class="btn btn-secondary">Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Valle de la Luna -->
+        <div class="modal fade" id="modalValleLuna" tabindex="-1" aria-labelledby="modalValleLunaLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalValleLunaLabel">Valle de la Luna</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/card/Valle de la Luna.jpg" class="img-fluid mb-3" alt="Valle de la Luna">
+                        <p>El Valle de la Luna, ubicado en el Parque Provincial Ischigualasto en la provincia de San
+                            Juan, es un paisaje de otro planeta. Con sus formaciones rocosas y colores surrealistas,
+                            este valle ofrece un viaje al pasado geológico de la Tierra. En Ischigualasto se han
+                            encontrado importantes restos fósiles de dinosaurios, convirtiéndolo en un lugar de gran
+                            valor científico y turístico.</p>
+                        <a href="https://www.ischigualasto.gob.ar/" target="_blank" class="btn btn-primary">Página
+                            oficial</a>
+                        <a href="https://maps.app.goo.gl/PJaxgrQqcCPeLQjg7" target="_blank"
+                            class="btn btn-secondary">Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sección de Actividades en los Destinos -->
+    <section id="actividades" class="seccion-actividades">
+        <div class="contenedor-actividades  text-center">
+            <h2 class="titulo-seccion">Actividades en los Destinos</h2>
+            <div class="fila-actividades">
+                <div class="columna-actividades">
+                    <h3 class="titulo-actividad">Cataratas del Iguazú</h3>
+                    <p class="texto-actividad"><strong>Senderismo:</strong> Recorridos por los circuitos superior e
+                        inferior para observar las cataratas desde diferentes ángulos.</p>
+                    <p class="texto-actividad"><strong>Paseo en lancha:</strong> Navegación bajo las cataratas para una
+                        experiencia emocionante y cercana al agua.</p>
+                    <p class="texto-actividad"><strong>Avistamiento de fauna:</strong> Observación de aves y otros
+                        animales en su hábitat natural.</p>
+                </div>
+                <div class="columna-actividades">
+                    <h3 class="titulo-actividad">Glaciar Perito Moreno</h3>
+                    <p class="texto-actividad"><strong>Trekking sobre hielo:</strong> Excursiones guiadas para caminar
+                        sobre el glaciar y explorar sus formaciones de hielo.</p>
+                    <p class="texto-actividad"><strong>Paseo en barco:</strong> Navegación cerca del glaciar para ver
+                        los desprendimientos de hielo desde una perspectiva única.</p>
+                    <p class="texto-actividad"><strong>Visitas guiadas:</strong> Tours educativos sobre la geología y la
+                        historia del glaciar y la región.</p>
+                </div>
+                <div class="columna-actividades">
+                    <h3 class="titulo-actividad">Aconcagua</h3>
+                    <p class="texto-actividad"><strong>Montañismo:</strong> Ascensos al pico más alto de América, con
+                        diferentes rutas para montañistas de todos los niveles.</p>
+                    <p class="texto-actividad"><strong>Senderismo:</strong> Caminatas por los alrededores con vistas
+                        espectaculares de la montaña y el paisaje andino.</p>
+                    <p class="texto-actividad"><strong>Campamentos:</strong> Experiencia de acampar en la base de la
+                        montaña y disfrutar del entorno natural.</p>
+                </div>
+                <div class="columna-actividades">
+                    <h3 class="titulo-actividad">Quebrada de Humahuaca</h3>
+                    <p class="texto-actividad"><strong>Exploración cultural:</strong> Visitas a pueblos históricos y
+                        sitios arqueológicos de las culturas andinas.</p>
+                    <p class="texto-actividad"><strong>Trekking:</strong> Caminatas por senderos con vistas a las
+                        formaciones geológicas únicas y montañas coloridas.</p>
+                    <p class="texto-actividad"><strong>Ferias artesanales:</strong> Descubrimiento de la artesanía local
+                        y productos tradicionales en mercados y ferias.</p>
+                </div>
+                <div class="columna-actividades">
+                    <h3 class="titulo-actividad">Península Valdés</h3>
+                    <p class="texto-actividad"><strong>Avistamiento de ballenas:</strong> Tours en barco para ver de
+                        cerca a las ballenas francas australes.</p>
+                    <p class="texto-actividad"><strong>Observación de fauna:</strong> Visitas a colonias de elefantes
+                        marinos, pingüinos y otras especies.</p>
+                    <p class="texto-actividad"><strong>Excursiones en kayak:</strong> Navegación en kayak por la costa
+                        para una experiencia más cercana a la naturaleza.</p>
+                </div>
+                <div class="columna-actividades">
+                    <h3 class="titulo-actividad">Parque Nacional Nahuel Huapi</h3>
+                    <p class="texto-actividad"><strong>Deportes acuáticos:</strong> Kayak, paddleboarding y navegación
+                        en los lagos del parque.</p>
+                    <p class="texto-actividad"><strong>Senderismo:</strong> Caminatas por senderos boscosos y montañosos
+                        con vistas espectaculares.</p>
+                    <p class="texto-actividad"><strong>Esquí:</strong> Actividades de esquí y snowboard en invierno en
+                        los centros de esquí cercanos.</p>
+                </div>
+                <div class="columna-actividades">
+                    <h3 class="titulo-actividad">Parque Nacional Talampaya</h3>
+                    <p class="texto-actividad"><strong>Recorridos en 4x4:</strong> Tours en vehículos todo terreno por
+                        los cañones y formaciones rocosas.</p>
+                    <p class="texto-actividad"><strong>Trekking:</strong> Caminatas guiadas para explorar los cañones y
+                        descubrir fósiles y petroglifos.</p>
+                    <p class="texto-actividad"><strong>Fotografía:</strong> Oportunidades para capturar imágenes de los
+                        paisajes únicos y la fauna del parque.</p>
+                </div>
+                <div class="columna-actividades">
+                    <h3 class="titulo-actividad">Selva Misionera</h3>
+                    <p class="texto-actividad"><strong>Senderismo:</strong> Caminatas por la selva con guías que
+                        explican la flora y fauna del lugar.</p>
+                    <p class="texto-actividad"><strong>Aventuras en tirolesa:</strong> Tirolesas a través del dosel de
+                        la selva para una experiencia emocionante.</p>
+                    <p class="texto-actividad"><strong>Observación de vida silvestre:</strong> Tours para ver animales y
+                        aves en su hábitat natural.</p>
+                </div>
+                <div class="columna-actividades">
+                    <h3 class="titulo-actividad">Valle de la Luna</h3>
+                    <p class="texto-actividad"><strong>Excursiones geológicas:</strong> Tours guiados para explorar las
+                        formaciones rocosas y aprender sobre la geología del lugar.</p>
+                    <p class="texto-actividad"><strong>Fotografía:</strong> Captura de imágenes de los paisajes únicos y
+                        las formaciones geológicas.</p>
+                    <p class="texto-actividad"><strong>Trekking:</strong> Caminatas por los senderos del parque para una
+                        experiencia inmersiva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Carrusel Miniaturas -->
+    <section class="carrucel-miniaturas">
+        <div class="marquesina marquesina--8">
+            <img class="marquesina__elemento" src="img/carrusel-mini/Aconcagua.jpg" width="100" height="100" alt="">
+            <img class="marquesina__elemento" src="img/carrusel-mini/Cataratas del Iguazú.jpg" width="100" height="100"
+                alt="">
+            <img class="marquesina__elemento" src="img/carrusel-mini/Glaciar Perito Moreno.jpg" width="100" height="100"
+                alt="">
+            <img class="marquesina__elemento" src="img/carrusel-mini/Parque Nacional Nahuel Huapi.jpg" width="100"
+                height="100" alt="">
+            <img class="marquesina__elemento" src="img/carrusel-mini/Parque Nacional Talampaya.jpg" width="100"
+                height="100" alt="">
+            <img class="marquesina__elemento" src="img/carrusel-mini/Península Valdés.jpg" width="100" height="100"
+                alt="">
+            <img class="marquesina__elemento" src="img/carrusel-mini/Quebrada de Humahuaca.jpg" width="100" height="100"
+                alt="">
+            <img class="marquesina__elemento" src="img/carrusel-mini/Selva Misionera.jpg" width="100" height="100"
+                alt="">
+        </div>
+    </section>
+
+
+    <!-- Sección de Consejos de Viaje -->
+    <section id="consejos" class="seccion-consejos">
+        <div class="contenedor-consejos text-center">
+            <h2 class="titulo-seccion">Consejos de Viaje</h2>
+            <div class="fila-consejos">
+                <div class="columna-consejos">
+                    <h3 class="titulo-consejo">Cataratas del Iguazú</h3>
+                    <p class="texto-consejo"><strong>Mejor Época para Visitar:</strong> Todo el año, pero la primavera y
+                        el otoño ofrecen un clima agradable y menos turistas.</p>
+                    <p class="texto-consejo"><strong>Alojamiento:</strong> Variedad de opciones desde campings y hostels
+                        hasta hoteles de lujo. Reserva con antelación en temporada alta.</p>
+                    <p class="texto-consejo"><strong>Qué Llevar:</strong> Ropa cómoda, impermeable, protección solar, y
+                        repelente de insectos.</p>
+                </div>
+                <div class="columna-consejos">
+                    <h3 class="titulo-consejo">Glaciar Perito Moreno</h3>
+                    <p class="texto-consejo"><strong>Mejor Época para Visitar:</strong> Verano, cuando los días son más
+                        largos y cálidos.</p>
+                    <p class="texto-consejo"><strong>Alojamiento:</strong> Hoteles y lodges cercanos en El Calafate.
+                        Reserva con antelación en temporada alta.</p>
+                    <p class="texto-consejo"><strong>Qué Llevar:</strong> Ropa abrigada en capas, gorro, guantes, y
+                        protector solar.</p>
+                </div>
+                <div class="columna-consejos">
+                    <h3 class="titulo-consejo">Aconcagua</h3>
+                    <p class="texto-consejo"><strong>Mejor Época para Visitar:</strong> Verano, especialmente para hacer
+                        trekking y montañismo.</p>
+                    <p class="texto-consejo"><strong>Alojamiento:</strong> Refugios y campamentos en la montaña, hoteles
+                        en Mendoza.</p>
+                    <p class="texto-consejo"><strong>Qué Llevar:</strong> Equipo de montañismo, ropa de abrigo en capas,
+                        calzado resistente, y suficiente agua.</p>
+                </div>
+                <div class="columna-consejos">
+                    <h3 class="titulo-consejo">Quebrada de Humahuaca</h3>
+                    <p class="texto-consejo"><strong>Mejor Época para Visitar:</strong> Todo el año, con un clima
+                        agradable en primavera y otoño.</p>
+                    <p class="texto-consejo"><strong>Alojamiento:</strong> Hostales y hoteles boutique en la región.</p>
+                    <p class="texto-consejo"><strong>Qué Llevar:</strong> Ropa cómoda, calzado para caminar, sombrero, y
+                        protector solar.</p>
+                </div>
+                <div class="columna-consejos">
+                    <h3 class="titulo-consejo">Península Valdés</h3>
+                    <p class="texto-consejo"><strong>Mejor Época para Visitar:</strong> Septiembre a diciembre para
+                        avistamiento de ballenas, octubre a marzo para fauna en general.</p>
+                    <p class="texto-consejo"><strong>Alojamiento:</strong> Hoteles y estancias turísticas en Puerto
+                        Madryn.</p>
+                    <p class="texto-consejo"><strong>Qué Llevar:</strong> Ropa cómoda, binoculares, cámara fotográfica,
+                        y protector solar.</p>
+                </div>
+                <div class="columna-consejos">
+                    <h3 class="titulo-consejo">Parque Nacional Nahuel Huapi</h3>
+                    <p class="texto-consejo"><strong>Mejor Época para Visitar:</strong> Verano para actividades al aire
+                        libre, invierno para deportes de nieve.</p>
+                    <p class="texto-consejo"><strong>Alojamiento:</strong> Hoteles y cabañas en Bariloche y Villa La
+                        Angostura.</p>
+                    <p class="texto-consejo"><strong>Qué Llevar:</strong> Ropa para actividades al aire libre, calzado
+                        resistente, y equipo para deportes de nieve en invierno.</p>
+                </div>
+                <div class="columna-consejos">
+                    <h3 class="titulo-consejo">Parque Nacional Talampaya</h3>
+                    <p class="texto-consejo"><strong>Mejor Época para Visitar:</strong> Primavera y otoño, evitando el
+                        calor extremo del verano.</p>
+                    <p class="texto-consejo"><strong>Alojamiento:</strong> Hoteles y campings en Villa Unión y
+                        Pagancillo.</p>
+                    <p class="texto-consejo"><strong>Qué Llevar:</strong> Ropa cómoda y ligera, sombrero, protector
+                        solar, y suficiente agua.</p>
+                </div>
+                <div class="columna-consejos">
+                    <h3 class="titulo-consejo">Selva Misionera</h3>
+                    <p class="texto-consejo"><strong>Mejor Época para Visitar:</strong> Primavera y otoño, cuando el
+                        clima es más moderado.</p>
+                    <p class="texto-consejo"><strong>Alojamiento:</strong> Eco-lodges y hoteles en la región.</p>
+                    <p class="texto-consejo"><strong>Qué Llevar:</strong> Ropa ligera y transpirable, impermeable,
+                        repelente de insectos, y calzado cómodo.</p>
+                </div>
+                <div class="columna-consejos">
+                    <h3 class="titulo-consejo">Valle de la Luna</h3>
+                    <p class="texto-consejo"><strong>Mejor Época para Visitar:</strong> Primavera y otoño, evitando el
+                        calor extremo del verano.</p>
+                    <p class="texto-consejo"><strong>Alojamiento:</strong> Hoteles y hostales en San Agustín del Valle
+                        Fértil.</p>
+                    <p class="texto-consejo"><strong>Qué Llevar:</strong> Ropa cómoda, sombrero, protector solar, y
+                        suficiente agua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pie-de-pagina bg-primario text-blanco py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Sobre Nosotros</h5>
+                    <p>Maravillas de Argentina es una iniciativa para destacar la belleza y diversidad natural de
+                        nuestro país. Nuestro objetivo es promover el turismo sostenible y el aprecio por la naturaleza.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="lista-enlaces">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#carrusel">Carrusel</a></li>
+                        <li><a href="#maravillas">Maravillas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal"
+                            data-bs-target="#contactModal">Hablamos?</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@maravillasargentina.com"
+                            class="text-contacto-footer">info@maravillasargentina.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+5491112345678" class="text-contacto-footer">+54 9 11
+                            1234 5678</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> <a
+                            href="https://maps.google.com/?q=Av.+Siempre+Viva+742,+Buenos+Aires,+Argentina"
+                            target="_blank" class="text-contacto-footer">Av. Siempre Viva 742, Buenos Aires,
+                            Argentina</a></p>
+                </div>
+            </div>
+            <div class="row mt-3dwe ">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 Maravillas de Argentina. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     <!-- Sección de Firma -->
+     <footer class="firma-maquina-escribir">
+        <div class="contenedor-firma" onmouseover="iniciarEscribir()">
+            <a href="https://www.pepito.com" class="firma-enlace">
+                <span class="texto-completo">Desarrollado por <span>SAL</span> con amor</span>
+            </a>
+        </div>
+    </footer>
+    
+
+
+    <!-- Enlace a Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Firma -->
+    <script src="firma-sal.js"></script>
+</body>
+
+</html>

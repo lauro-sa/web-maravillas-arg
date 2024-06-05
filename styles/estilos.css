@@ -1,0 +1,366 @@
+:root {
+    /* Variables de color */
+    --color-primario: #2C3E50;
+    --color-secundario: #ECF0F1;
+    --color-texto-principal: #2C3E50;
+    --color-texto-secundario: #7F8C8D;
+    --color-enfasis: #3498DB;
+    --color-enfasis-hover: #2980B9;
+    --color-fondo-borroso: rgba(236, 240, 241, 0.219);
+    --color-borde: #dddddd;
+    --color-fondo-tarjeta: #ffffff;
+}
+
+/* ---------- Estilos Generales ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    color: var(--color-texto-principal);
+    background-color: var(--color-secundario);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: xx-large;
+    color: var(--color-texto-principal);
+    display: inline-block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo-seccion::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-enfasis);
+    margin: 0.5rem auto 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .titulo-seccion {
+        font-size: x-large;
+
+    }
+}
+
+
+/* ---------- Header y NavBar ---------- */
+
+.bg-custom {
+    background-color: var(--color-primario);
+}
+
+.navbar{ 
+    padding: 10px 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a img {
+    width: 32px !important;
+    margin-right: 15px;
+}
+
+.logo .navbar-brand {
+    font-weight: 700;
+    color: whitesmoke;
+    font-size: large !important;
+}
+
+/* ---------- Sección Carrusel principal ---------- */
+
+.carousel-caption {
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    *backdrop-filter: blur(2px);
+}
+
+.fondo-borroso-titulo {
+    *background: var(--color-fondo-borroso);
+    *backdrop-filter: blur(4px);
+    *padding: 10px;
+    *border-radius: 10px;
+    *text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.fondo-borroso-titulo h5 {
+    font-size: 75px;
+    font-weight: 600;
+    color: var(--color-texto-principal);
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+.fondo-borroso-titulo p {
+    font-size: x-large;
+    font-weight: 600;
+    color: var(--color-texto-principal);
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fondo-borroso-titulo h5 {
+        font-size: x-large;
+    }
+
+    .fondo-borroso-titulo p {
+        font-size: medium;
+    }
+}
+
+
+/* ---------- Sección Card Boostrap de los destinos ---------- */
+.titulo-cards {
+    font-size: xx-large;
+    border-bottom: 2px solid var(--color-enfasis);
+    padding-bottom: 0.25rem;
+    margin-bottom: 3.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .titulo-cards {
+        font-size: x-large;
+    }
+}
+
+/* Animacion texto NavBar y Titulo Cards */
+.tracking-in-expand-fwd {
+    -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px);
+        transform: translateZ(-700px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand-fwd {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px);
+        transform: translateZ(-700px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+
+.btn-primary {
+    background-color: var(--color-enfasis);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-enfasis-hover);
+}
+
+.btn-secondary{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #2c3e50d4;
+    font-weight: 600;
+
+}
+
+.btn-secondary:hover{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #2C3E50;
+}
+
+
+
+/* ---------- Sección Actividades en los Destinos ---------- */
+.seccion-actividades {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: var(--color-secundario);
+}
+
+.contenedor-actividades {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fila-actividades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.columna-actividades {
+    flex: 1;
+    padding: 1rem;
+    min-width: 300px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin: 1rem;
+    background-color: var(--color-fondo-tarjeta);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.columna-actividades:hover {
+    transform: scale(1.05);
+}
+
+.titulo-actividad {
+    font-size: x-large;
+    color: var(--color-texto-principal);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.texto-actividad {
+    font-size: medium;
+    color: var(--color-texto-principal);
+    line-height: 1.5;
+}
+
+/* ---------- Sección Consejos de Viaje ---------- */
+.seccion-consejos {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: var(--color-secundario);
+}
+
+.contenedor-consejos {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fila-consejos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.columna-consejos {
+    flex: 1;
+    padding: 1rem;
+    min-width: 300px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    margin: 0.4rem;
+    background-color: var(--color-fondo-tarjeta);
+}
+
+.titulo-consejo {
+    font-size: large;
+    font-weight: 600;
+    color: var(--color-texto-secundario);
+    margin-bottom: 1rem;
+}
+
+.texto-consejo {
+    font-size: small;
+    color: var(--color-texto-secundario);
+    line-height: 1.5;
+}
+
+/* ---------- Estilos para el footer ---------- */
+.pie-de-pagina {
+    background-color: var(--color-primario);
+    color: var(--color-texto-secundario);
+    padding: 2rem 0;
+    padding-bottom: 0px!important;
+}
+
+.pie-de-pagina h5 {
+    font-size: medium;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.pie-de-pagina:hover h5 {
+    color: whitesmoke;
+}
+
+.pie-de-pagina p i {
+    margin-right: 0.5rem;
+    font-size: medium;
+}
+
+.pie-de-pagina p,
+.pie-de-pagina a {
+    color: var(--color-blanco);
+    font-size: small;
+    line-height: 1.6;
+}
+
+.text-contacto-footer {
+    text-decoration: none;
+}
+
+.pie-de-pagina a:hover {
+    color: var(--color-enfasis);
+    text-decoration: none;
+}
+
+.lista-enlaces {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-enlaces li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pie-de-pagina {
+        text-align: center;
+    }
+}

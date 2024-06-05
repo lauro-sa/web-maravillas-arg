@@ -1,0 +1,26 @@
+/* Sección de Firma */
+
+.firma-maquina-escribir {
+    background-color: var(--color-primario);
+    color: #f0f0f0;
+    padding-bottom: 5px;
+    text-align: center;
+
+}
+
+.firma-enlace {
+    color: #dcdcdc;
+    text-decoration: none;
+    font-size: 0.8rem;
+
+
+}
+
+.firma-enlace span span {
+    transition: color 1s ease, letter-spacing 1s ease;
+}
+
+.firma-maquina-escribir:hover .firma-enlace span span {
+    color: #ffffff;
+    letter-spacing: 2px;
+}
