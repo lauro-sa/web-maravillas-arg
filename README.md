@@ -78,6 +78,6 @@ Este proyecto fue desarrollado por SAL, como parte de un trabajo para la diploma
 
 - **Accesibilidad**: Mejorar la accesibilidad del sitio web asegurándome de que todos los elementos sean accesibles para personas con discapacidades, incluyendo el uso de etiquetas alt para imágenes y un mejor contraste de colores.
 
-- **Interactividad**: Añadir más interactividad al sitio web mediante el uso de animaciones y efectos que mejoren la experiencia del usuario sin sobrecargar la página. Seguramente con la implementación de JavaScript esto se pueda realizar mejor.
+- **Interactividad**: Añadir más interactividad al sitio web mediante el uso de animaciones y efectos que mejoren la experiencia del usuario sin sobrecargar la página. Seguramente con la implementación de JavaScript esto se pueda realizar mejor..
 
 
