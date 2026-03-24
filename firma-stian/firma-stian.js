@@ -1,7 +1,7 @@
 // ============================================================
 // firma-stian.js — Web Component universal "S7ian Code"
 // Uso: <firma-stian enlace="https://stiancode.dev" logo="/logo-claro.png"></firma-stian>
-// Hover: "Developer" explota letra por letra → "S7ian Code" nace del centro
+// Hover: "S7ian Code" explota letra por letra → "Developer" nace del centro
 // Funciona en Astro, React, Vue, vanilla HTML, etc.
 // ============================================================
 class FirmaStian extends HTMLElement {
@@ -13,8 +13,8 @@ class FirmaStian extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this._themeObserver = null;
-    // Direcciones aleatorias fijas para cada letra de "Developer"
-    this._explosiones = 'Developer'.split('').map(() => ({
+    // Direcciones aleatorias fijas para cada letra de "S7ian Code"
+    this._explosiones = 'S7ian Code'.split('').map(() => ({
       x: (Math.random() - 0.5) * 60,
       y: (Math.random() - 0.5) * 40,
       r: (Math.random() - 0.5) * 120,
@@ -95,8 +95,8 @@ class FirmaStian extends HTMLElement {
 
     const wasVisible = this.shadowRoot.querySelector('.firma')?.classList.contains('visible');
 
-    // Generar letras de "Developer" con direcciones de explosión
-    const letrasHTML = 'Developer'.split('').map((letra, i) => {
+    // Generar letras de "S7ian Code" con direcciones de explosión
+    const letrasHTML = 'S7ian Code'.split('').map((letra, i) => {
       const e = this._explosiones[i];
       const delay = i * 0.02;
       return `<span class="letra" style="--ex:${e.x}px;--ey:${e.y}px;--er:${e.r}deg;--d:${delay}s">${letra}</span>`;
@@ -202,12 +202,12 @@ class FirmaStian extends HTMLElement {
           height: 14px;
         }
 
-        /* Letras de "Developer" — explotan al hover */
+        /* Letras de "S7ian Code" — explotan al hover */
         .firma-default {
           display: flex;
           font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
           font-size: 11.5px;
-          font-weight: 500;
+          font-weight: 700;
           letter-spacing: 0.02em;
           color: ${c.texto};
         }
@@ -224,11 +224,11 @@ class FirmaStian extends HTMLElement {
           opacity: 0;
         }
 
-        /* "S7ian Code" — nace del centro tras la explosión */
+        /* "Developer" — nace del centro tras la explosión */
         .firma-hover {
           font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
           font-size: 11.5px;
-          font-weight: 700;
+          font-weight: 500;
           letter-spacing: 0.02em;
           white-space: nowrap;
           color: ${c.textoHover};
@@ -272,7 +272,7 @@ class FirmaStian extends HTMLElement {
         <span class="firma-logo-wrap"><img class="firma-logo" src="${logoSrc}" alt="" width="18" height="18" /></span>
         <span class="firma-textos">
           <span class="firma-default">${letrasHTML}</span>
-          <span class="firma-hover">S7ian Code</span>
+          <span class="firma-hover">Developer</span>
         </span>
       </a>
     `;
